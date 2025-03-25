@@ -1,0 +1,370 @@
+/* Footer principal del sitio */
+.site-footer {
+  position: fixed; /* Cambiado de absolute a fixed */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: linear-gradient(to right, #020202, #300808, #020202);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000; /* Valor alto para asegurar que esté por encima de otros elementos */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: space-between;
+  align-items: center;
+  justify-content: center;
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 10px;
+  text-align: center;
+}
+
+.footer-content p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--theme-color, #ff0000);
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.social-icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-color, #ff0000);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(var(--theme-color-rgb, 255, 0, 0), 0.3);
+}
+
+.social-icons a:hover::before {
+  transform: translateY(0);
+}
+
+/* Agregar los íconos de Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+/* Animación sutil para el footer al cargar la página */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-footer {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Ajustes responsivos */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-links {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 12px 0;
+  }
+
+  .footer-content {
+    gap: 8px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icons a {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer-content p,
+  .footer-links a {
+    font-size: 0.75rem;
+  }
+}
+
+/* Modal / Ventanas flotantes */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 1;
+}
+
+.modal-content {
+  background: rgba(30, 30, 30, 0.95);
+  margin: 80px auto;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: translateY(-30px);
+  transition: transform 0.4s ease;
+  border: 1px solid rgba(var(--theme-color-rgb, 255, 0, 0), 0.1);
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(var(--theme-color-rgb, 255, 0, 0), 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: white;
+}
+
+.modal-body {
+  padding: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modal-body h3 {
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.modal-body h3:first-child {
+  margin-top: 0;
+}
+
+.modal-body h4 {
+  color: rgba(var(--theme-color-rgb, 255, 0, 0), 0.9);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  margin-bottom: 15px;
+}
+
+.modal-body ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 8px;
+}
+
+.modal-footer {
+  padding: 15px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: right;
+}
+
+.modal-button {
+  background: linear-gradient(
+    45deg,
+    var(--theme-color, #ff0000),
+    rgba(var(--theme-color-rgb, 255, 0, 0), 0.8)
+  );
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.modal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(var(--theme-color-rgb, 255, 0, 0), 0.3);
+}
+
+/* Personalización de la barra de desplazamiento */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: rgba(var(--theme-color-rgb, 255, 0, 0), 0.3);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--theme-color-rgb, 255, 0, 0), 0.5);
+}
+
+/* Animación para el fondo del modal */
+@keyframes modalBgPulse {
+  0%,
+  100% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 60px auto;
+    width: 95%;
+  }
+
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal-body {
+    padding: 20px;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    margin: 40px auto;
+  }
+
+  .modal-header {
+    padding: 15px 20px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .modal-footer {
+    padding: 10px 15px;
+  }
+}

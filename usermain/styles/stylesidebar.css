@@ -1,0 +1,418 @@
+/* Estilos para el sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Justo debajo del header */
+  left: 0;
+  height: calc(100vh - 60px);
+  background: linear-gradient(to bottom, #000000, #200505, #000000);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animación más suave */
+  width: 220px; /* Tamaño expandido */
+  display: flex;
+  flex-direction: column;
+  transform-origin: left center;
+}
+
+.sidebar.collapsed {
+  width: 60px; /* Tamaño colapsado */
+}
+
+.sidebar-toggle,
+.sidebar-expand {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+  display: none;
+}
+
+.sidebar:not(.collapsed) .sidebar-expand {
+  display: none;
+}
+
+.sidebar-toggle-btn {
+  position: absolute;
+  /* Posición más baja */
+  top: 85%;
+  transform: translateY(-50%);
+  /* Otras propiedades de estilo */
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.sidebar-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.sidebar-toggle-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.sidebar-toggle-btn:hover svg {
+  transform: translateX(-2px);
+}
+
+.sidebar-expand .sidebar-toggle-btn:hover svg {
+  transform: translateX(2px);
+}
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #000;
+  overflow-x: hidden;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin: 5px 0;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación para los elementos del menú cuando se colapsa */
+.sidebar.collapsed .sidebar-item {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInRight 0.3s forwards;
+  animation-delay: calc(0.05s * var(--item-index, 0));
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #ff0000;
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+  transform-origin: bottom;
+  z-index: 2; /* Aseguramos que esté por encima de otros elementos */
+}
+
+.sidebar-link:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #fff;
+}
+
+.sidebar-link:hover::before {
+  transform: scaleY(1);
+}
+
+.sidebar-link:active {
+  transform: scale(0.98);
+}
+
+/* Tooltips para modo colapsado */
+.sidebar.collapsed .sidebar-link {
+  position: relative;
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-left: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+/* Mantener la línea roja visible en el estado colapsado */
+.sidebar.collapsed .sidebar-link::before {
+  /* Anulamos las propiedades del tooltip para este selector específico */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #ff0000;
+  margin-left: 0;
+  border-width: 0;
+  border-style: none;
+  border-color: transparent;
+  transform: scaleY(0); /* Mantiene oculta hasta hover/active */
+  transition: transform 0.2s ease;
+  transform-origin: bottom;
+}
+
+/* Crear un nuevo selector para el tooltip */
+.sidebar.collapsed .sidebar-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-left: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+/* Mostrar línea roja en hover para ambos estados */
+.sidebar-link:hover::before,
+.sidebar.collapsed .sidebar-link:hover::before {
+  transform: scaleY(1);
+}
+
+/* Estado activo para ambos estados */
+.sidebar-link.active::before,
+.sidebar.collapsed .sidebar-link.active::before {
+  transform: scaleY(1);
+}
+
+/* Crear un nuevo pseudoelemento para la flecha del tooltip */
+.sidebar.collapsed .sidebar-link > span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: 5px;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.8) transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+/* Estilo activo para el fondo */
+.sidebar-link.active,
+.sidebar.collapsed .sidebar-link.active {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+/* Mostrar tooltip y su flecha en hover */
+.sidebar.collapsed .sidebar-link:hover::after,
+.sidebar.collapsed .sidebar-link:hover > span::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+  color: #ff0000;
+  transition: all 0.2s ease;
+}
+
+.sidebar-icon svg {
+  transition: transform 0.2s ease;
+}
+
+.sidebar-link:hover .sidebar-icon svg {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Ajuste para el texto del sidebar */
+.sidebar-text {
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar.collapsed .sidebar-text {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none; /* Evita que capture clics mientras está oculto */
+  visibility: hidden; /* Asegura que no sea visible pero mantiene el espacio */
+}
+
+.sidebar:not(.collapsed) .sidebar-text {
+  position: static;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s; /* Pequeño retraso para que aparezca después de la expansión */
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sidebar.collapsed .sidebar-icon {
+  margin-right: 0;
+}
+
+.sidebar-logout {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+
+.sidebar-logout .sidebar-link {
+  color: #ff6b6b;
+}
+
+.sidebar-logout .sidebar-icon {
+  color: #ff6b6b;
+}
+
+/* Ajuste del contenido principal cuando el sidebar está visible */
+.main-content {
+  margin-left: 220px;
+  transition: margin-left 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 20px;
+  padding-top: 80px; /* Espacio para el header fijo */
+}
+
+.main-content.expanded {
+  margin-left: 60px;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.collapsed {
+    width: 60px;
+    overflow: visible;
+    transform: translateX(0);
+  }
+
+  .sidebar.expanded {
+    width: 220px;
+    overflow: visible;
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .main-content.sidebarActive {
+    margin-left: 60px;
+  }
+
+  .main-content.sidebarExpanded {
+    margin-left: 220px;
+  }
+
+  .sidebar::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+  }
+
+  .sidebar.expanded::after {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+/* Animación para el estado activo */
+.sidebar-link.active {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+.sidebar-link.active::before {
+  transform: scaleY(1);
+}

@@ -1,0 +1,3437 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Panel de control para configuración de cuenta y preferencias de usuario"
+    />
+    <meta
+      name="keywords"
+      content="panel, usuario, stream, configuración, preferencias, gammer, programas, software, hardware, buy"
+    />
+    <link rel="stylesheet" href="./usermain/userstyle.css" />
+    <link rel="stylesheet" href="./usermain/styles/styleheader.css" />
+    <link rel="stylesheet" href="./usermain/styles/stylesidebar.css" />
+    <link rel="stylesheet" href="./usermain/styles/stylecarousel.css" />
+    <link rel="stylesheet" href="./usermain/styles/styledownload.css" />
+    <link rel="stylesheet" href="./usermain/styles/styleproducts.css" />
+    <link rel="stylesheet" href="./usermain/styles/styleupdates.css" />
+    <link rel="stylesheet" href="./usermain/styles/styleyourwebsite.css" />
+    <link rel="stylesheet" href="./usermain/styles/styleabout.css" />
+    <link rel="stylesheet" href="./usermain/styles/stylecontact.css" />
+    <link rel="stylesheet" href="./usermain/styles/stylefooter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>IDK TEAM</title>
+  </head>
+  <body id="user-dashboard">
+    <!--HEADER-->
+    <header id="main-header" class="site-header">
+      <div class="header-container">
+        <img
+          class="site-logo"
+          id="site-logo"
+          src="../home/sources/logotransparent.png"
+          alt="SENSI JONAX Logo"
+        />
+        <a class="site-title" id="site-title">IDK TEAM</a>
+        <button
+          type="button"
+          id="mobile-menu-toggle"
+          class="mobile-menu-toggle"
+          aria-label="Abrir menú"
+        >
+          <span class="menu-icon">≡</span>
+        </button>
+        <div id="main-navigation-container" class="main-navigation-container">
+          <nav
+            id="main-navigation"
+            class="main-navigation"
+            aria-label="Navegación principal"
+          >
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#dashboard" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#sectioncreate-website" class="nav-link">Profile</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  aria-expanded="false"
+                  >Options ≡</a
+                >
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">
+                    <a href="#sectionproducts-content" class="dropdown-link">Products</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#" class="dropdown-link"
+                      >Particles</a
+                    >
+                  </li>
+                  <li class="dropdown-divider"><hr /></li>
+                  <li class="dropdown-item">
+                    <a href="#sectiondownload-content" class="dropdown-link">Download</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#sectionupdates-content" class="dropdown-link"
+                      >Updates</a
+                    >
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#sectioncreate-website" class="dropdown-link">Create Website</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#sectionabout-content" class="dropdown-link">About</a>
+                  </li>
+                  <li class="dropdown-divider"><hr /></li>
+                  <li class="dropdown-item">
+                    <a href="#sectioncontact-content" class="dropdown-link">Contact</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="../login/loginhtml.html" class="nav-link nav-logout"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <form role="search" id="search-form" class="search-form">
+            <input
+              type="search"
+              id="search-input"
+              class="search-input"
+              placeholder="Search..."
+              aria-label="Buscar"
+            />
+            <button type="submit" id="search-button" class="search-button">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!--SIDEBAR IZQUIERDO-->
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-toggle">
+        <button
+          id="sidebarCollapse"
+          class="sidebar-toggle-btn"
+          aria-label="Contraer menú lateral"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+      </div>
+      <nav id="sidebarNav" class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="#dashboard" class="sidebar-link" data-tooltip="Home">
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                  ></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+              <span class="sidebar-text">Home</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#sectionproducts-content"
+              class="sidebar-link"
+              data-tooltip="Products"
+            >
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">Products</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#sectiondownload-content"
+              class="sidebar-link"
+              data-tooltip="Download"
+            >
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </span>
+              <span class="sidebar-text">Download</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#sectionupdates-content"
+              class="sidebar-link"
+              data-tooltip="Updates"
+            >
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M23 4v6h-6"></path>
+                  <path d="M1 20v-6h6"></path>
+                  <path
+                    d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">Updates</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#sectioncreate-website"
+              class="sidebar-link"
+              data-tooltip="Settings"
+            >
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+              </span>
+              <span class="sidebar-text">Create Website</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#sectionabout-content" class="sidebar-link" data-tooltip="About">
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </span>
+              <span class="sidebar-text">About</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              href="#sectioncontact-content"
+              class="sidebar-link"
+              data-tooltip="Contact"
+            >
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span class="sidebar-text">Contact</span>
+            </a>
+          </li>
+          <li class="sidebar-item sidebar-logout">
+            <a
+              href="../login/loginhtml.html"
+              class="sidebar-link logout-btn"
+              data-tooltip="Logout"
+            >
+              <span class="sidebar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+              </span>
+              <span class="sidebar-text">Login</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-expand">
+        <button
+          id="sidebarExpand"
+          class="sidebar-toggle-btn"
+          aria-label="Expandir menú lateral"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <main id="main-content" class="main-content">
+      <!-- Contenido principal - Dashboard  HOME-->
+      <section id="dashboard" class="dashboard-section active-section">
+        <!-- Carousel de productos destacados -->
+        <div class="product-carousel-container">
+          <h2 class="carousel-title">Productos Destacados</h2>
+          <div class="product-carousel">
+            <button
+              class="carousel-control prev-btn"
+              aria-label="Anterior producto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <div class="carousel-track-container">
+              <ul class="carousel-track">
+                <!-- Producto 1 -->
+                <li class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="https://www.achorao.com/cdn/shop/files/proxwirelessportada.jpg?v=1736605498"
+                        alt="Gaming Headset"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title">Gaming Headset Pro</h3>
+                      <p class="product-description">
+                        Auriculares gaming con sonido envolvente 7.1 y micrófono
+                        con cancelación de ruido.
+                      </p>
+                      <div class="product-price">$129.99</div>
+                      <button class="product-action">Ver Detalles</button>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Producto 2 -->
+                <li class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="https://cyccomputer.pe/21629-large_default/teclado-redragon-yama-k550-white-mecanico-rgb-teclas-macro-pnk550w-sp.jpg"
+                        alt="Teclado Mecánico"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title">Teclado Mecánico RGB</h3>
+                      <p class="product-description">
+                        Teclado gaming con switches mecánicos e iluminación RGB
+                        personalizable.
+                      </p>
+                      <div class="product-price">$89.99</div>
+                      <button class="product-action">Ver Detalles</button>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Producto 3 -->
+                <li class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/116879164_01/w=800,h=800,fit=pad"
+                        alt="Mouse Gaming"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title">Mouse Gaming 16000 DPI</h3>
+                      <p class="product-description">
+                        Mouse ergonómico con sensor óptico de alta precisión y 8
+                        botones programables.
+                      </p>
+                      <div class="product-price">$64.99</div>
+                      <button class="product-action">Ver Detalles</button>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Producto 4 -->
+                <li class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="https://www.sercoplus.com/57084-large_default/monitor-gaming-msi-g27c3f-27-rapid-va.jpg"
+                        alt="Monitor Gaming"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title">Monitor Gaming 165Hz</h3>
+                      <p class="product-description">
+                        Monitor curvo de 27" con resolución QHD, 1ms de
+                        respuesta y tecnología G-Sync.
+                      </p>
+                      <div class="product-price">$349.99</div>
+                      <button class="product-action">Ver Detalles</button>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Producto 5 -->
+                <li class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="https://oechsle.vteximg.com.br/arquivos/ids/13792083-1000-1000/image-410fa629097b4fab851823d7a22b8b8f.jpg?v=638120143162330000"
+                        alt="Silla Gaming"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title">Silla Gaming Ergonómica</h3>
+                      <p class="product-description">
+                        Silla gaming con soporte lumbar, reposabrazos 4D y
+                        reclinación de hasta 180°.
+                      </p>
+                      <div class="product-price">$259.99</div>
+                      <button class="product-action">Ver Detalles</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="carousel-control next-btn"
+              aria-label="Siguiente producto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <div class="carousel-nav">
+            <button
+              class="carousel-indicator active"
+              data-slide="0"
+              aria-label="Ir a producto 1"
+            ></button>
+            <button
+              class="carousel-indicator"
+              data-slide="1"
+              aria-label="Ir a producto 2"
+            ></button>
+            <button
+              class="carousel-indicator"
+              data-slide="2"
+              aria-label="Ir a producto 3"
+            ></button>
+            <button
+              class="carousel-indicator"
+              data-slide="3"
+              aria-label="Ir a producto 4"
+            ></button>
+            <button
+              class="carousel-indicator"
+              data-slide="4"
+              aria-label="Ir a producto 5"
+            ></button>
+          </div>
+        </div>
+        <!-- Otros widgets del dashboard pueden ir aquí -->
+      </section>
+      <!-- Contenido principal - Centro de Descargas -->
+      <!--section download-->
+      <section
+        id="sectiondownload-content"
+        class="sectiondownload-content hidden-section"
+      >
+        <section id="downloads" class="downloads-section">
+          <h1 class="section-title">Centro de Descargas</h1>
+          <p class="section-description">
+            Descarga software, complementos y recursos para mejorar tu
+            experiencia. Todos los archivos son verificados y seguros para su
+            uso. <br>Important! Pass: 1</br>
+          </p>
+
+          <!-- Filtro y búsqueda -->
+          <div class="download-filter">
+            <div class="filter-controls">
+              <button class="filter-btn active" data-filter="all">Todo</button>
+              <button class="filter-btn" data-filter="software">
+                Software
+              </button>
+              <button class="filter-btn" data-filter="plugins">
+                Complementos
+              </button>
+              <button class="filter-btn" data-filter="templates">
+                Plantillas
+              </button>
+              <button class="filter-btn" data-filter="resources">
+                Recursos
+              </button>
+            </div>
+            <div class="download-search">
+              <input
+                type="text"
+                id="download-search-input"
+                placeholder="Buscar archivos..."
+                class="download-search-input"
+              />
+            </div>
+          </div>
+
+          <!-- Categoría: Software -->
+          <div class="download-category" id="software-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                Software
+              </h2>
+              <span class="file-count">4 archivos</span>
+            </div>
+
+            <div class="download-grid">
+              <!-- Software Item 1 -->
+              <div class="download-card" data-category="software">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Wondershare Filmora 2024</h3>
+                  <p class="download-description">
+                    Software para edición de video de varios formatos diferentes (AVI, MP4, WebM, etc).
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v14.0.7.9577 (x64)</span>
+                    <span class="download-size">787.81 MB</span>
+                    <span class="download-date">Actualizado: 22/03/25</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/hitr286izgux0da/WF14.0.11.9772.x64.ZDescargasORG.rar/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Software Item 2 -->
+              <div class="download-card" data-category="software">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="3"
+                      width="20"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">BlueStacks P64</h3>
+                  <p class="download-description">
+                    Emulador de Android para PC con soporte para juegos y
+                    aplicaciones en Pie 64.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v5.14.21.1008</span>
+                    <span class="download-size">1 MB</span>
+                    <span class="download-date">Actualizado: 22/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/2l8jnc0s0w6bec9/P64_BlueStacksInstaller_5.14.21.1008_native.7z/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Software Item 3 -->
+              <div class="download-card" data-category="software">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect
+                      x="1"
+                      y="5"
+                      width="15"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">OBS Studio x64</h3>
+                  <p class="download-description">
+                    Mejora la calidad visual de tus transmisiones y grabaciones.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v31.0.1</span>
+                    <span class="download-size">149.17 MB</span>
+                    <span class="download-date">Actualizado: 22/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/t0o5z6menz9yqu0/OBS-Studio-31.0.1-Windows-Installer.rar/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Software Item 4 -->
+              <div class="download-card" data-category="software">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="3"
+                      width="20"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">BlueStacks N32</h3>
+                  <p class="download-description">
+                    Emulador de Android para PC con soporte para juegos y
+                    aplicaciones en Nougat 32.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v5.9.0</span>
+                    <span class="download-size">1 MB</span>
+                    <span class="download-date">Actualizado: 22/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/zlvkna2z8vuttay/BlueStacks_App_Player_v5.9.0.rar/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+            </div>
+          </div>
+
+          <!-- Categoría: Complementos -->
+          <div class="download-category" id="plugins-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                Complementos
+              </h2>
+              <span class="file-count">3 archivos</span>
+            </div>
+
+            <div class="download-grid">
+              <!-- Plugin Item 1 -->
+              <div class="download-card" data-category="plugins">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                    ></path>
+                    <path
+                      d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Block Defender</h3>
+                  <p class="download-description">
+                    Anulador de Antivirus.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v1.2.5</span>
+                    <span class="download-size">447 KB</span>
+                    <span class="download-date">Actualizado: 22/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/y09nv7zlouv5042/blockdefender.rar/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Plugin Item 2 -->
+              <div class="download-card" data-category="plugins">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    ></polygon>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Windows Update Blocker</h3>
+                  <p class="download-description">
+                    Extensión con emotes personalizados para plataformas de
+                    streaming.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v1.8</span>
+                    <span class="download-size">1 MB</span>
+                    <span class="download-date">Actualizado: 22/02/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/zdhtewt9oe7583x/windows-update-blocker-1-8.zip/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Plugin Item 3 -->
+              <div class="download-card" data-category="plugins">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Requerimientos For W10 and W11</h3>
+                  <p class="download-description">
+                    Microsoft DirectX and Microsoft Visual C++ Redistributable
+                    Package.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v1.1</span>
+                    <span class="download-size">86.3 MB</span>
+                    <span class="download-date">Actualizado: 22/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.mediafire.com/file/p07pf54nir4bwnk/Requerimientos.rar/file"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría: Plantillas -->
+          <div class="download-category" id="templates-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                Plantillas
+              </h2>
+              <span class="file-count">4 archivos</span>
+            </div>
+
+            <div class="download-grid">
+              <!-- Template Item 1 -->
+              <div class="download-card" data-category="templates">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"
+                    ></path>
+                    <line x1="16" y1="8" x2="2" y2="22"></line>
+                    <line x1="17.5" y1="15" x2="9" y2="15"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Gaming Stream Overlay Pack</h3>
+                  <p class="download-description">
+                    Pack de overlays para streams de gaming con animaciones.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v3.0</span>
+                    <span class="download-size">45 MB</span>
+                    <span class="download-date">Actualizado: 18/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="./downloads/templates/gaming-overlay-pack.zip"
+                    class="download-btn"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Template Item 2 -->
+              <div class="download-card" data-category="templates">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Social Media Templates</h3>
+                  <p class="download-description">
+                    Plantillas para redes sociales: banners, thumbnails y posts.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v2.1</span>
+                    <span class="download-size">38 MB</span>
+                    <span class="download-date">Actualizado: 25/02/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="./downloads/templates/social-media-templates.zip"
+                    class="download-btn"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Template Item 3 -->
+              <div class="download-card" data-category="templates">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"
+                    ></polygon>
+                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Stream Transitions Kit</h3>
+                  <p class="download-description">
+                    Kit de transiciones animadas para tus transmisiones.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v1.8</span>
+                    <span class="download-size">62 MB</span>
+                    <span class="download-date">Actualizado: 10/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="./downloads/templates/stream-transitions-kit.zip"
+                    class="download-btn"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Template Item 4 -->
+              <div class="download-card" data-category="templates">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="3"
+                      width="20"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Alerts & Widgets Bundle</h3>
+                  <p class="download-description">
+                    Bundle de widgets y alertas para plataformas de streaming.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v2.3</span>
+                    <span class="download-size">55 MB</span>
+                    <span class="download-date">Actualizado: 05/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="./downloads/templates/alerts-widgets-bundle.zip"
+                    class="download-btn"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría: Recursos -->
+          <div class="download-category" id="resources-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                Recursos
+              </h2>
+              <span class="file-count">3 archivos</span>
+            </div>
+
+            <div class="download-grid">
+              <!-- Resource Item 1 -->
+              <div class="download-card" data-category="resources">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Sensi Idk</h3>
+                  <p class="download-description">
+                    Sientete el mejor de tu escuadra.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v2.5</span>
+                    <span class="download-size">14.72 MB</span>
+                    <span class="download-date">Actualizado: 15/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.google.com"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Resource Item 2 -->
+              <div class="download-card" data-category="resources">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Script de Limpieza</h3>
+                  <p class="download-description">
+                    Limpia tu ordenador de archivos basura y optimiza su
+                    rendimiento.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v1.4</span>
+                    <span class="download-size">1 KB</span>
+                    <span class="download-date">Actualizado: 22/02/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="https://www.google.com"
+                    class="download-btn" target="_blank"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- Resource Item 3 -->
+              <div class="download-card" data-category="resources">
+                <div class="download-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
+                    ></path>
+                    <line x1="8" y1="10" x2="16" y2="10"></line>
+                    <line x1="8" y1="14" x2="16" y2="14"></line>
+                    <line x1="8" y1="18" x2="12" y2="18"></line>
+                  </svg>
+                </div>
+                <div class="download-info">
+                  <h3 class="download-title">Pack de Fuentes Premium</h3>
+                  <p class="download-description">
+                    Colección de fuentes premium optimizadas para overlays y
+                    gráficos.
+                  </p>
+                  <div class="download-meta">
+                    <span class="download-version">v2.1</span>
+                    <span class="download-size">28 MB</span>
+                    <span class="download-date">Actualizado: 08/03/2025</span>
+                  </div>
+                </div>
+                <div class="download-actions">
+                  <a
+                    href="./downloads/resources/premium-fonts-pack.zip"
+                    class="download-btn"
+                    download
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--SECTION PRODUCTS-->
+      <section
+        id="sectionproducts-content"
+        class="sectionproducts-content hidden-section"
+      >
+        <section id="products" class="products-section">
+          <h1 class="section-title">Catálogo de Productos</h1>
+          <p class="section-description">
+            Explora nuestra selección de productos premium para streamers y
+            creadores de contenido. Equipamiento de alta calidad para mejorar
+            tus transmisiones.
+          </p>
+
+          <!-- Filtro y búsqueda -->
+          <div class="products-filter">
+            <div class="filter-controls">
+              <button class="filter-btn active" data-filter="all">Todos</button>
+              <button class="filter-btn" data-filter="hardware">
+                Hardware
+              </button>
+              <button class="filter-btn" data-filter="software">
+                Software
+              </button>
+              <button class="filter-btn" data-filter="accessories">
+                Accesorios
+              </button>
+              <button class="filter-btn" data-filter="merch">
+                Merchandising
+              </button>
+            </div>
+            <div class="product-search">
+              <input
+                type="text"
+                id="product-search-input"
+                placeholder="Buscar productos..."
+                class="product-search-input"
+              />
+            </div>
+          </div>
+
+          <!-- Categoría: Hardware -->
+          <div class="product-category" id="hardware-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                Hardware
+              </h2>
+              <span class="product-count">4 productos</span>
+            </div>
+
+            <div class="product-grid">
+              <!-- Hardware Item 1 -->
+              <div class="product-item" data-category="hardware">
+                <div class="product-image">
+                  <img
+                    src="https://www.achorao.com/cdn/shop/files/proxwirelessportada.jpg?v=1736605498"
+                    alt="Gaming Headset Pro"
+                  />
+                  <div class="product-badges">
+                    <span class="product-badge new">Nuevo</span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Gaming Headset Pro</h3>
+                  <p class="product-description">
+                    Auriculares gaming con sonido envolvente 7.1 y micrófono con
+                    cancelación de ruido.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$129.99</span>
+                    <span class="product-stock in-stock">En stock</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Hardware Item 2 -->
+              <div class="product-item" data-category="hardware">
+                <div class="product-image">
+                  <img
+                    src="https://cyccomputer.pe/21629-large_default/teclado-redragon-yama-k550-white-mecanico-rgb-teclas-macro-pnk550w-sp.jpg"
+                    alt="Teclado Mecánico RGB"
+                  />
+                  <div class="product-badges">
+                    <span class="product-badge offer">-15%</span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Teclado Mecánico RGB</h3>
+                  <p class="product-description">
+                    Teclado gaming con switches mecánicos e iluminación RGB
+                    personalizable.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$89.99</span>
+                    <span class="product-stock in-stock">En stock</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Hardware Item 3 -->
+              <div class="product-item" data-category="hardware">
+                <div class="product-image">
+                  <img
+                    src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/116879164_01/w=800,h=800,fit=pad"
+                    alt="Mouse Gaming 16000 DPI"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Mouse Gaming 16000 DPI</h3>
+                  <p class="product-description">
+                    Mouse ergonómico con sensor óptico de alta precisión y 8
+                    botones programables.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$64.99</span>
+                    <span class="product-stock low-stock">Pocas unidades</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Hardware Item 4 -->
+              <div class="product-item" data-category="hardware">
+                <div class="product-image">
+                  <img
+                    src="https://www.sercoplus.com/57084-large_default/monitor-gaming-msi-g27c3f-27-rapid-va.jpg"
+                    alt="Monitor Gaming 165Hz"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Monitor Gaming 165Hz</h3>
+                  <p class="product-description">
+                    Monitor curvo de 27" con resolución QHD, 1ms de respuesta y
+                    tecnología G-Sync.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$349.99</span>
+                    <span class="product-stock in-stock">En stock</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría: Software -->
+          <div class="product-category" id="software-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Software
+              </h2>
+              <span class="product-count">3 productos</span>
+            </div>
+
+            <div class="product-grid">
+              <!-- Software Item 1 -->
+              <div class="product-item" data-category="software">
+                <div class="product-image">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY8t05KSGzkDx97ZkwRtqevHGVn5MXw6wMKg&s"
+                    alt="Stream Master Pro"
+                  />
+                  <div class="product-badges">
+                    <span class="product-badge premium">Premium</span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Stream Master Pro</h3>
+                  <p class="product-description">
+                    Software profesional para gestión de streams con
+                    inteligencia artificial integrada.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$19.99</span>
+                    <span class="product-stock in-stock">Descarga digital</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Software Item 2 -->
+              <div class="product-item" data-category="software">
+                <div class="product-image">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCumgkfkEHPiKZ16LX1Ag2jtkPr0f4vx2Fgg&s"
+                    alt="Audio Processing Suite"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Audio Processing Suite</h3>
+                  <p class="product-description">
+                    Suite completa para procesamiento de audio en tiempo real
+                    con filtros avanzados.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$29.99</span>
+                    <span class="product-stock in-stock">Descarga digital</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Software Item 3 -->
+              <div class="product-item" data-category="software">
+                <div class="product-image">
+                  <img
+                    src="https://mma.prnewswire.com/media/1973256/MicrosoftTeams_image__17.jpg?p=facebook"
+                    alt="Video Editor Pro"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Wondershare Filmora 14</h3>
+                  <p class="product-description">
+                    Editor de video optimizado para creadores de contenido con
+                    efectos especiales y transiciones.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$0.00</span>
+                    <span class="product-stock in-stock">Descarga digital</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría: Accesorios -->
+          <div class="product-category" id="accessories-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                Accesorios
+              </h2>
+              <span class="product-count">3 productos</span>
+            </div>
+
+            <div class="product-grid">
+              <!-- Accessories Item 1 -->
+              <div class="product-item" data-category="accessories">
+                <div class="product-image">
+                  <img
+                    src="https://www.cyberpuerta.mx/img/product/XL/CP-ELGATO-10GAK9901-1.jpg"
+                    alt="Stream Deck XL"
+                  />
+                  <div class="product-badges">
+                    <span class="product-badge popular">Popular</span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Stream Deck XL</h3>
+                  <p class="product-description">
+                    Controlador avanzado con 32 teclas LCD personalizables para
+                    control total de tus streams.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$249.99</span>
+                    <span class="product-stock in-stock">En stock</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Accessories Item 2 -->
+              <div class="product-item" data-category="accessories">
+                <div class="product-image">
+                  <img
+                    src="https://hca.pe/storage/media/large_w7Nq2df6SwcXkwgI4tHuLWZBqj8TPvZKiNSWyuQt.png"
+                    alt="Micrófono Condensador USB"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Micrófono Condensador USB</h3>
+                  <p class="product-description">
+                    Micrófono profesional con patrón cardioide, soporte
+                    amortiguador y filtro pop incluidos.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$129.99</span>
+                    <span class="product-stock out-stock">Agotado</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn notify-btn">
+                    Avisar disponibilidad
+                  </button>
+                </div>
+              </div>
+
+              <!-- Accessories Item 3 -->
+              <div class="product-item" data-category="accessories">
+                <div class="product-image">
+                  <img
+                    src="https://www.cyberpuerta.mx/img/product/M/CP-ELGATO-10GAM9901-1.jpg"
+                    alt="Key Light Air"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Key Light Air</h3>
+                  <p class="product-description">
+                    Iluminación profesional LED con control de temperatura y
+                    brillo ajustable mediante app.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$129.99</span>
+                    <span class="product-stock in-stock">En stock</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría: Merchandising -->
+          <div class="product-category" id="merch-category">
+            <div class="category-header">
+              <h2 class="category-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"
+                  ></path>
+                </svg>
+                Merchandising
+              </h2>
+              <span class="product-count">2 productos</span>
+            </div>
+
+            <div class="product-grid">
+              <!-- Merch Item 1 -->
+              <div class="product-item" data-category="merch">
+                <div class="product-image">
+                  <img
+                    src="https://cdn.awsli.com.br/2500x2500/1624/1624133/produto/135039574/camiseta-gamer-e-sport-freefire-lb-sports-c-nick-3c885200.jpg"
+                    alt="Camiseta Gaming Premium"
+                  />
+                  <div class="product-badges">
+                    <span class="product-badge new">Nuevo</span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Camiseta Gaming Idk</h3>
+                  <p class="product-description">
+                    Camiseta de alta calidad con diseño exclusivo para gamers, streamers y seguidores.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$19.99</span>
+                    <span class="product-stock in-stock">Todas las tallas</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+
+              <!-- Merch Item 2 -->
+              <div class="product-item" data-category="merch">
+                <div class="product-image">
+                  <img
+                    src="https://m.media-amazon.com/images/I/61gP1jWutNL._AC_UF350,350_QL80_.jpg"
+                    alt="Taza Streamer Pro"
+                  />
+                </div>
+                <div class="product-info">
+                  <h3 class="product-title">Taza Streamer Pro</h3>
+                  <p class="product-description">
+                    Taza negra de cerámica de alta calidad que se aclarece con el calor.
+                  </p>
+                  <div class="product-meta">
+                    <span class="product-price">$5.99</span>
+                    <span class="product-stock in-stock">En stock</span>
+                  </div>
+                </div>
+                <div class="product-actions">
+                  <button class="product-action-btn details-btn">
+                    Más detalles
+                  </button>
+                  <button class="product-action-btn contact-btn">
+                    Contactar
+                  </button>
+                  <button class="product-action-btn buy-btn">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--SECTION UPDATES-->
+      <section
+        id="sectionupdates-content"
+        class="sectionupdates-content hidden-section"
+      >
+        <section id="updates" class="updates-section">
+          <h1 class="section-title">Historial de Actualizaciones</h1>
+          <p class="section-description">
+            Mantente al día con las últimas mejoras, correcciones y nuevas
+            características implementadas en nuestra plataforma.
+          </p>
+
+          <!-- Filtros y ordenamiento -->
+          <div class="updates-filter">
+            <div class="filter-group">
+              <label for="update-sort" class="filter-label">Ordenar por:</label>
+              <select id="update-sort" class="update-sort-select">
+                <option value="date-desc">Más recientes primero</option>
+                <option value="date-asc">Más antiguas primero</option>
+                <option value="version-desc">Versión (mayor a menor)</option>
+                <option value="version-asc">Versión (menor a mayor)</option>
+                <option value="importance">Importancia</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="update-filter" class="filter-label"
+                >Filtrar por:</label
+              >
+              <select id="update-filter" class="update-filter-select">
+                <option value="all">Todas las actualizaciones</option>
+                <option value="feature">Nuevas características</option>
+                <option value="improvement">Mejoras</option>
+                <option value="bugfix">Correcciones</option>
+                <option value="security">Seguridad</option>
+              </select>
+            </div>
+            <div class="update-search">
+              <input
+                type="text"
+                id="update-search-input"
+                placeholder="Buscar actualizaciones..."
+                class="update-search-input"
+              />
+            </div>
+          </div>
+
+          <!-- Lista de actualizaciones -->
+          <div class="updates-timeline">
+            <!-- Update 1 -->
+            <div
+              class="update-item"
+              data-version="2.5.0"
+              data-date="2025-03-15"
+              data-type="feature"
+            >
+              <div class="update-badge feature">Nueva característica</div>
+              <div class="update-content">
+                <div class="update-header">
+                  <h3 class="update-title">
+                    Integración con IA para optimización de streams
+                  </h3>
+                  <div class="update-meta">
+                    <span class="update-version">v2.5.0</span>
+                    <span class="update-date">15 de marzo, 2025</span>
+                    <span class="update-time">14:30</span>
+                  </div>
+                </div>
+                <div class="update-description">
+                  <p>
+                    Hemos implementado un nuevo sistema de inteligencia
+                    artificial que analiza automáticamente la calidad de tus
+                    streams y sugiere configuraciones optimizadas para tu
+                    hardware específico. Esta tecnología adapta parámetros como
+                    bitrate, resolución y configuración de audio para maximizar
+                    la calidad según tu conexión a internet.
+                  </p>
+                  <div class="update-details">
+                    <ul>
+                      <li>Análisis en tiempo real de la calidad del stream</li>
+                      <li>
+                        Recomendaciones personalizadas basadas en tu hardware
+                      </li>
+                      <li>
+                        Autoajuste de configuraciones durante transmisiones
+                      </li>
+                      <li>Panel de estadísticas avanzadas post-stream</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Update 2 -->
+            <div
+              class="update-item"
+              data-version="2.4.2"
+              data-date="2025-02-28"
+              data-type="improvement"
+            >
+              <div class="update-badge improvement">Mejora</div>
+              <div class="update-content">
+                <div class="update-header">
+                  <h3 class="update-title">
+                    Rendimiento mejorado en modo de baja latencia
+                  </h3>
+                  <div class="update-meta">
+                    <span class="update-version">v2.4.2</span>
+                    <span class="update-date">28 de febrero, 2025</span>
+                    <span class="update-time">10:15</span>
+                  </div>
+                </div>
+                <div class="update-description">
+                  <p>
+                    Optimizamos significativamente el rendimiento del modo de
+                    baja latencia, reduciendo el uso de CPU hasta en un 30% y
+                    mejorando la estabilidad general durante sesiones largas de
+                    streaming. Esta actualización es especialmente beneficiosa
+                    para usuarios con sistemas de gama media.
+                  </p>
+                  <div class="update-details">
+                    <ul>
+                      <li>Reducción de uso de CPU hasta un 30%</li>
+                      <li>Mayor estabilidad en streams de larga duración</li>
+                      <li>Menor consumo de memoria RAM</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Update 3 -->
+            <div
+              class="update-item"
+              data-version="2.4.1"
+              data-date="2025-02-10"
+              data-type="bugfix"
+            >
+              <div class="update-badge bugfix">Corrección</div>
+              <div class="update-content">
+                <div class="update-header">
+                  <h3 class="update-title">
+                    Solución a problemas de audio en modo multicanal
+                  </h3>
+                  <div class="update-meta">
+                    <span class="update-version">v2.4.1</span>
+                    <span class="update-date">10 de febrero, 2025</span>
+                    <span class="update-time">16:45</span>
+                  </div>
+                </div>
+                <div class="update-description">
+                  <p>
+                    Corregimos un problema crítico que causaba desincronización
+                    de audio al utilizar configuraciones de sonido multicanal.
+                    También solucionamos varios errores menores relacionados con
+                    la captura de audio de dispositivos externos.
+                  </p>
+                  <div class="update-details">
+                    <ul>
+                      <li>
+                        Corrección de desincronización en audio multicanal
+                      </li>
+                      <li>
+                        Solución a problemas con dispositivos de audio externos
+                      </li>
+                      <li>
+                        Mejora en la detección automática de fuentes de audio
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Update 4 -->
+            <div
+              class="update-item"
+              data-version="1.1.1"
+              data-date="2025-03-22"
+              data-type="improvement"
+            >
+              <div class="update-badge improvement">Mejora</div>
+              <div class="update-content">
+                <div class="update-header">
+                  <h3 class="update-title">
+                    Solución a problemas de audio mono y stereo
+                  </h3>
+                  <div class="update-meta">
+                    <span class="update-version">v1.1.1</span>
+                    <span class="update-date">22 de marzo, 2025</span>
+                    <span class="update-time">16:29</span>
+                  </div>
+                </div>
+                <div class="update-description">
+                  <p>
+                    Corregimos un problema crítico que causaba desincronización
+                    de audio al utilizar configuraciones de sonido multicanal.
+                    También solucionamos varios errores menores relacionados con
+                    la captura de audio de dispositivos externos.
+                  </p>
+                  <div class="update-details">
+                    <ul>
+                      <li>
+                        Corrección de desincronización en audio multicanal
+                      </li>
+                      <li>
+                        Solución a problemas con dispositivos de audio externos
+                      </li>
+                      <li>
+                        Mejora en la detección automática de fuentes de audio
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--SECTION CREAT YOUR WEBSITE-->
+      <section
+        id="sectioncreate-website"
+        class="sectioncreate-website hidden-section"
+      >
+        <section id="create-website" class="create-website-section">
+          <div class="profile-header">
+            <div class="profile-image-container">
+              <img
+                src="../imagesall/developing.jpg"
+                alt="Developer Profile"
+                class="profile-image"
+              />
+              <div class="profile-overlay"></div>
+            </div>
+            <div class="profile-info">
+              <h1>Jonax idk</h1>
+              <h2>Full Stack Developer</h2>
+              <p class="profile-tagline">
+                Transformando ideas en experiencias digitales excepcionales.
+              </p>
+              <a href="#sectioncontact-content" class="contact-now-btn">Contact Me</a>
+            </div>
+          </div>
+          <!-- Skills Section -->
+          <div class="skills-section">
+            <h2 class="section-title">Mis Habilidades</h2>
+            <div class="skills-container">
+              <!-- Actualizar los skill cards con SVGs de colores -->
+              <!-- HTML Skill Card con SVG colorido -->
+              <div class="skill-card" data-skill="HTML">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#E44D26"
+                      d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"
+                    ></path>
+                    <path
+                      fill="#F16529"
+                      d="M64 116.8l36.378-10.086 8.559-95.878H64z"
+                    ></path>
+                    <path
+                      fill="#EBEBEB"
+                      d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">HTML</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="95%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">95%</span>
+              </div>
+
+              <!-- CSS Skill Card -->
+              <div class="skill-card" data-skill="CSS">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#1572B6"
+                      d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"
+                    ></path>
+                    <path
+                      fill="#33A9DC"
+                      d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"
+                    ></path>
+                    <path
+                      fill="#EBEBEB"
+                      d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"
+                    ></path>
+                    <path
+                      fill="#EBEBEB"
+                      d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">CSS</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="90%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">90%</span>
+              </div>
+
+              <!-- JavaScript Skill Card -->
+              <div class="skill-card" data-skill="JAVASCRIPT">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#F0DB4F"
+                      d="M1.408 1.408h125.184v125.185H1.408z"
+                    ></path>
+                    <path
+                      fill="#323330"
+                      d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">JavaScript</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="85%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">85%</span>
+              </div>
+
+              <!-- React Skill Card -->
+              <div class="skill-card" data-skill="REACT">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <g fill="#61DAFB">
+                      <circle cx="64" cy="64" r="11.4"></circle>
+                      <path
+                        d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21c-1.2-2.1-2.4-4.2-3.6-6.1-1.1-1.9-2.3-3.7-3.5-5.5 3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.7 10.3zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7.7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zM35.3 113.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <h3 class="skill-name">React</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="80%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+              </div>
+
+              <!-- Continuar con los demás skills de manera similar con sus iconos coloridos respectivos -->
+              <!-- TypeScript -->
+              <div class="skill-card" data-skill="TypeScript">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#007acc"
+                      d="M2 63.91v62.5h125v-125H2zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1A23 23 0 0180 109.19c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73l4.6-2.64 3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 001.86-4.43 5.07 5.07 0 00-.81-3.41c-1.1-1.58-3.28-2.9-8.41-5-6.57-2.68-9.44-4.35-12.09-7.06a16 16 0 01-4-6.81 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H57.16v46.23H45.65V69.26H29.38v-5a49.19 49.19 0 01.14-5.16c.06-.08 10-.12 22-.1h21.74z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">TypeScript</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="75%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">75%</span>
+              </div>
+
+              <!-- Git -->
+              <div class="skill-card" data-skill="Git">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#F34F29"
+                      d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">Git</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="85%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">85%</span>
+              </div>
+
+              <!-- GitHub -->
+              <div class="skill-card" data-skill="GitHub">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#181616"
+                      d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35.817 58.867 34.97 64 34.908c5.13.062 10.3.91 15.127 2.66 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
+                    ></path>
+                    <path
+                      d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">GitHub</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="80%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+              </div>
+
+              <!-- Python -->
+              <div class="skill-card" data-skill="Python">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <linearGradient
+                      id="python-original-a"
+                      gradientUnits="userSpaceOnUse"
+                      x1="70.252"
+                      y1="1237.476"
+                      x2="170.659"
+                      y2="1151.089"
+                      gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"
+                    >
+                      <stop offset="0" stop-color="#5A9FD4" />
+                      <stop offset="1" stop-color="#306998" />
+                    </linearGradient>
+                    <linearGradient
+                      id="python-original-b"
+                      gradientUnits="userSpaceOnUse"
+                      x1="209.474"
+                      y1="1098.811"
+                      x2="173.62"
+                      y2="1149.537"
+                      gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"
+                    >
+                      <stop offset="0" stop-color="#FFD43B" />
+                      <stop offset="1" stop-color="#FFE873" />
+                    </linearGradient>
+                    <path
+                      fill="url(#python-original-a)"
+                      d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"
+                      transform="translate(0 10.26)"
+                    />
+                    <path
+                      fill="url(#python-original-b)"
+                      d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"
+                      transform="translate(0 10.26)"
+                    />
+                  </svg>
+                </div>
+                <h3 class="skill-name">Python</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="75%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">75%</span>
+              </div>
+
+              <!-- C# -->
+              <div class="skill-card" data-skill="C#">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#68217A"
+                      d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6zM82 66v-4h5v-5h5v5h5v4h-5v5h-5v-5h-5zm3.3-14C81.1 44.5 73.1 39.5 64 39.5c-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8-21.8 0-39.5-17.7-39.5-39.5S42.2 24.5 64 24.5c14.7 0 27.5 8.1 34.3 20l-13 7.5zM115 66h-5v5h-4v-5h-6v-4h6v-5h4v5h5v4z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">C#</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="70%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">70%</span>
+              </div>
+
+              <!-- C++ -->
+              <div class="skill-card" data-skill="C++">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#00599C"
+                      d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6zm-53.5 70c-21.8 0-39.5-17.7-39.5-39.5S42.2 24.5 64 24.5c14.7 0 27.5 8.1 34.3 20l-13 7.5C81.1 44.5 73.1 39.5 64 39.5c-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8zM106 50.5h-4v-4h-4v4h-4v4h4v4h4v-4h4v-4zm16.5 0h-4v-4h-4v4h-4v4h4v4h4v-4h4v-4z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">C++</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="65%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">65%</span>
+              </div>
+
+              <!-- PHP -->
+              <div class="skill-card" data-skill="PHP">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#6181B6"
+                      d="M64 33.039C30.26 33.039 2.906 46.901 2.906 64S30.26 94.961 64 94.961 125.094 81.099 125.094 64 97.74 33.039 64 33.039zM48.103 70.032c-1.458 1.364-3.077 1.927-4.86 2.507-1.783.581-4.052.461-6.811.461h-6.253l-1.733 10h-7.301l6.515-34H41.7c4.224 0 7.305 1.215 9.242 3.432 1.937 2.217 2.519 5.364 1.747 9.337-.319 1.637-.856 3.159-1.614 4.515a15.118 15.118 0 01-2.972 3.748zM69.414 73l2.881-14.42c.328-1.688.208-2.942-.361-3.555-.57-.614-1.782-1.025-3.635-1.025h-5.79l-3.731 19h-7.244l6.515-33h7.244l-1.732 9h6.453c4.061 0 6.861.815 8.402 2.231s2.003 3.356 1.387 6.528L76.772 73h-7.358zm40.259-11.178c-.318 1.637-.856 3.133-1.613 4.488-.758 1.357-1.748 2.598-2.971 3.722-1.458 1.364-3.078 1.927-4.86 2.507-1.782.581-4.053.461-6.812.461h-6.253l-1.732 10h-7.301l6.514-34h14.041c4.224 0 7.305 1.215 9.241 3.432 1.935 2.217 2.518 5.418 1.746 9.39zM95.919 54h-5.001l-2.727 14h4.442c2.942 0 5.136-.29 6.576-1.4 1.442-1.108 2.413-2.828 2.918-5.421.484-2.491.264-4.434-.66-5.458-.925-1.024-2.774-1.721-5.548-1.721zm-56.985 0h-5.002l-2.727 14h4.441c2.943 0 5.136-.29 6.577-1.4 1.441-1.108 2.413-2.828 2.917-5.421.484-2.491.264-4.434-.66-5.458S41.708 54 38.934 54z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">PHP</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="60%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">60%</span>
+              </div>
+
+              <!-- Node.js -->
+              <div class="skill-card" data-skill="Node.js">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#83CD29"
+                      d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772 8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623C42.594 41 41 42.061 41 42.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086-3.146 1.783-3.726 2.02-6.677 3.043-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 004.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566 0 7.466 4.059 16.512 23.453 16.512 14.039 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.105 0 12.461 1.954 13.842 8.091.118.577.645.991 1.24.991h5.754c.354 0 .692-.143.94-.396.24-.272.367-.613.335-.979-.891-10.568-7.912-15.493-22.112-15.493-12.631 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.955-3.978 7.066-13.309 7.066z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">Node.js</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="75%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">75%</span>
+              </div>
+
+              <!-- MySQL -->
+              <div class="skill-card" data-skill="MySQL">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 128 128">
+                    <path
+                      fill="#00618A"
+                      d="M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.809 1.829 1.365 2.731 1.07 1.73 2.876 4.052 4.488 5.268 1.762 1.33 3.577 2.751 5.465 3.902 3.358 2.047 7.107 3.217 10.34 5.268 1.906 1.21 3.799 2.733 5.658 4.097.92.675 1.537 1.724 2.732 2.147v-.194c-.628-.8-.79-1.898-1.366-2.733l-2.537-2.537c-2.48-3.292-5.629-6.184-8.976-8.585-2.669-1.916-8.642-4.504-9.755-7.609l-.195-.195c1.892-.214 4.107-.898 5.854-1.367 2.934-.786 5.556-.583 8.585-1.365l4.097-1.171v-.78c-1.531-1.571-2.623-3.651-4.292-5.073-4.37-3.72-9.138-7.437-14.048-10.537-2.724-1.718-6.089-2.835-8.976-4.292-.971-.491-2.677-.746-3.318-1.562-1.517-1.932-2.342-4.382-3.511-6.633-2.449-4.717-4.854-9.868-7.024-14.831-1.48-3.384-2.447-6.72-4.293-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.145-.129-4.292-.26-6.438-.391-1.311-.546-2.673-2.149-3.902-2.927C17.811 4.565 11.239.589 7.734 2.927l-.293.195c-2.828 2.262-4.393 5.67-6.243 8.585l-5.268 11.122c-1.312 2.783-1.899 5.501-3.317 8.196-1.371 2.6-2.967 4.5-4.097 7.413C-8.57 44.713.086 55.841 6.243 57.807c2.076.673 4.638.494 6.731 1.367 1.756.733 3.642 2.01 5.072 2.926l5.268 4.293c1.312 1.297 2.234 2.791 3.902 3.513 1.038.451 2.731.211 3.708.732l-4.293-.732c-.732-1.094-1.595-1.593-2.341-2.732-1.893-2.845-3.108-5.958-5.463-8.392-3.723-.26-2.792-1.993-1.17-3.122 1.344-1.021 2.731 1.711 1.17 2.927 2.223.363 4.452-1.265 5.463.976.14.312-.199.487-.391.732-1.495 1.593-.575 4.292 1.365 5.463.865.534 2.935 1.629 4.097.586 1.851-1.674-1.266-6.198 1.171-9.17.2-.249.487-.325.732-.391 1.722 2.729 3.365 5.534 5.073 8.391 1.111 1.859 2.854 3.799 4.293 5.463 1.091 1.256 1.706 2.813 3.122 3.513v-.195l-.195-.195c-.632-.974-1.671-1.474-2.342-2.341a206.478 206.478 0 01-6.049-10.343c-1.591-3.349-3.083-7.119-4.389-10.732-.525-1.448-.904-3.684-2.147-4.292-.926-2.151-3.805-2.4-5.853-3.709-1.229-.784-2.632-2.082-3.122-3.317-1.446-3.652 2.337-5.461 3.709-8.196.827-1.653 1.562-3.596 2.536-5.268 1.481-2.548 3.319-5.168 5.073-7.609.677-.946 1.877-1.561 1.952-3.317-1.053-1.466-1.207-3.906-2.146-5.854-2.251-4.664-1.599-11.545 1.171-15.367 2.607-3.596 10.612-5.657 15.367-3.513 4.13 1.866 8.233 3.72 11.904 6.438 1.726 1.288 3.456 3.85 5.658 4.292h2.536c3.549.678 7.587 1.568 10.929 2.927 6.775 2.764 12.847 6.712 18.369 11.122 16.78 13.363 27.255 32.383 35.609 55.12 1.257 3.418 1.794 6.58 2.927 10.147 2.246 7.057 4.781 14.299 6.829 21.269 2.049 6.969 3.942 14.058 6.829 19.902 1.476 2.984 7.412 4.315 10.147 5.854 1.921 1.084 5.112 2.228 6.829 3.708 3.457 2.982 6.831 6.413 9.951 9.756 1.571 1.685 6.481 2.545 8.782 3.318 1.602.543 4.249 1.54 5.658 2.536 2.711 1.917 5.47 4.177 8.002 6.438 1.268 1.132 5.283 3.133 5.463 4.878z"
+                    ></path>
+                    <path
+                      fill="#00618A"
+                      d="M53.822 17.878c-1.879.009-3.338.211-4.683.732l-.195.195.195.195c.92.574 2.044.95 2.927 1.756 1.07.977 2.34 2.343 2.732 3.903v.195h.195c1.694-.867 3.628-.341 5.17-.732 1.492-.378 2.872-.951 4.292-1.756-1.289-1.269-2.316-2.798-3.902-3.903-1.658-1.152-5.361-1.297-6.731-.585z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-name">MySQL</h3>
+                <div class="skill-level">
+                  <div
+                    class="skill-progress"
+                    style="width: 0%"
+                    data-percent="70%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">70%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects Section -->
+          <div class="projects-section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+
+            <div class="projects-grid">
+              <!-- Project 1 -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="../imagesall/tikfinity.webp" alt="Web Gaming Solutions" />
+                  <div class="project-overlay">
+                    <a href="#" class="view-project-btn">Ver Proyecto</a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Web Gaming Solutions</h3>
+                  <p class="project-description">
+                    Desarrollo de sitios web profesionales para gamers, streamers y comunidades gaming con sistemas de gestión de contenido personalizado, integración con APIs de juegos y bases de datos optimizadas.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="../imagesall/sistgamer.png" alt="Sistema de Gestión de Juegos" />
+                  <div class="project-overlay">
+                    <a href="#" class="view-project-btn">Ver Proyecto</a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Sistema de Gestión de Juegos</h3>
+                  <p class="project-description">
+                    Plataforma para desarrolladores de juegos que facilita la organización de activos, seguimiento de bugs y colaboración en equipo. Incluye integración con repositorios Git.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">GitHub</span>
+                    <span class="tech-tag">PHP</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="../imagesall/dashboarddatos.jpg" alt="Dashboard de Análisis de Datos" />
+                  <div class="project-overlay">
+                    <a href="#" class="view-project-btn">Ver Proyecto</a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Dashboard de Análisis de Datos</h3>
+                  <p class="project-description">
+                    Herramienta de visualización y análisis de datos para streamers y creadores de contenido que genera insights en tiempo real sobre audiencia e interacción.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="cta-container">
+              <p class="cta-text">
+                ¿Tienes un proyecto en mente? ¡Hablemos sobre cómo puedo
+                ayudarte a hacerlo realidad!
+              </p>
+              <a href="#sectioncontact-content" id="cta-contact-btn" class="cta-contact-btn">
+                Contactar Ahora
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Añadir después de la sección Create Website -->
+      <!--SECTION ABOUTT-->
+      <section id="sectionabout-content" class="sectionabout-content hidden-section">
+        <section id="about" class="about-section">
+          <div class="about-header">
+            <div class="about-header-image">
+              <img src="../imagesall/COD.jpg" alt="Our Team" />
+              <div class="about-header-overlay"></div>
+            </div>
+            <div class="about-header-content">
+              <h1 class="about-title">Acerca de Nosotros</h1>
+                <p class="about-subtitle">Transformando ideas en experiencias digitales excepcionales.</p>
+            </div>
+          </div>
+
+          <div class="about-container">
+            <!-- Historia y Misión -->
+            <div class="about-story-section">
+              <div class="about-story-content">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <p>None.</p>
+                <p>None.</p>
+              </div>
+              <div class="about-story-image">
+                <img src="../imagesall/fullstackdev0.webp" alt="Nuestra historia" />
+              </div>
+            </div>
+
+            <!-- Misión y Visión -->
+            <div class="about-mission-vision">
+              <div class="mission-box">
+                <div class="mission-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L4 8.5V22h16V8.5L12 2z"></path>
+                    <path d="M9 22V12h6v10"></path>
+                  </svg>
+                </div>
+                <h3>Nuestra Misión</h3>
+                <p>Proporcionar herramientas y soluciones tecnológicas de alta calidad que permitan a los usuarios expresar su creatividad sin limitaciones técnicas, ofreciendo siempre soporte personalizado y actualizaciones constantes.</p>
+              </div>
+              <div class="vision-box">
+                <div class="vision-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="2"></circle>
+                    <path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7z"></path>
+                  </svg>
+                </div>
+                <h3>Nuestra Visión</h3>
+                <p>Convertirnos en el referente tecnológico para la comunidad  general, innovando constantemente y estableciendo nuevos estándares en la industria del contenido digital y el entretenimiento en línea.</p>
+              </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="about-values">
+              <h2 class="section-title">Nuestros Valores</h2>
+              <div class="values-grid">
+                <div class="value-card">
+                  <div class="value-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                  </div>
+                  <h3>Innovación</h3>
+                  <p>Constantemente exploramos nuevas tecnologías y enfoques para mejorar nuestras soluciones.</p>
+                </div>
+                <div class="value-card">
+                  <div class="value-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  </div>
+                  <h3>Calidad</h3>
+                  <p>Nos comprometemos a ofrecer productos y servicios que superen las expectativas de nuestros usuarios.</p>
+                </div>
+                <div class="value-card">
+                  <div class="value-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <h3>Comunidad</h3>
+                  <p>Creemos en el poder de la colaboración y construimos soluciones pensando en la comunidad de creadores.</p>
+                </div>
+                <div class="value-card">
+                  <div class="value-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                  </div>
+                  <h3>Adaptabilidad</h3>
+                  <p>Nos adaptamos rápidamente a los cambios tecnológicos y a las necesidades cambiantes de los streamers.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- El Equipo -->
+            <div class="about-team">
+              <h2 class="section-title">Nuestro Equipo</h2>
+              <p class="team-intro">Somos un equipo de profesionales apasionados por la tecnología y el streaming, comprometidos con crear soluciones innovadoras.</p>
+              
+              <!--<div class="team-grid">
+                <div class="team-member">
+                  <div class="member-photo">
+                    <img src="../imagesall/team-member1.jpg" alt="Team Member" />
+                  </div>
+                  <h3 class="member-name">Jonax idk</h3>
+                  <p class="member-role">Fundador & Desarrollador Principal</p>
+                  <div class="member-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="team-member">
+                  <div class="member-photo">
+                    <img src="../imagesall/team-member2.jpg" alt="Team Member" />
+                  </div>
+                  <h3 class="member-name">María García</h3>
+                  <p class="member-role">Diseñadora UX/UI</p>
+                  <div class="member-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="team-member">
+                  <div class="member-photo">
+                    <img src="../imagesall/team-member3.jpg" alt="Team Member" />
+                  </div>
+                  <h3 class="member-name">Carlos Rodríguez</h3>
+                  <p class="member-role">Especialista en Soporte Técnico</p>
+                  <div class="member-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <!-- Testimonios -->
+            <div class="about-testimonials">
+              <h2 class="section-title">Lo Que Dicen de Nosotros</h2>
+              <div class="testimonials-container">
+                <div class="testimonial-card">
+                  <div class="testimonial-quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                      <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                    </svg>
+                  </div>
+                  <p class="testimonial-text">Idk ha revolucionado mi forma de hacer streaming. Sus herramientas son intuitivas y el soporte técnico es excepcional. Recomiendo sus productos a todos mis colegas streamers.</p>
+                  <div class="testimonial-author">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL-bLLRbIGlKZr947s0lVunGZaZHggoZwL6Q&s" alt="Avatar" class="testimonial-avatar" />
+                    <div class="testimonial-info">
+                      <h4>Laura Martínez</h4>
+                      <p>Streamer de Gaming | 500K+ seguidores</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <div class="testimonial-quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                      <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                    </svg>
+                  </div>
+                  <p class="testimonial-text">Desde que implementé las soluciones de optimización, la calidad de mis transmisiones ha mejorado notablemente y he experimentado un aumento del 40% en mi audiencia. ¡Increíble!</p>
+                  <div class="testimonial-author">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTeyfacITGtmewe32ueXqMyEI3Uf4yceC8fw&s" alt="Avatar" class="testimonial-avatar" />
+                    <div class="testimonial-info">
+                      <h4>Miguel Sánchez</h4>
+                      <p>Creador de Contenido | YouTube Partner</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="about-faq">
+              <h2 class="section-title">Preguntas Frecuentes</h2>
+              <div class="faq-container">
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>¿Qué hace diferente a Idk Team de otras plataformas?</h3>
+                    <span class="faq-toggle">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Nos diferenciamos por nuestro enfoque personalizado, combinando soluciones técnicas de alta calidad con un soporte dedicado. Nuestras herramientas están diseñadas por streamers para streamers, con un profundo entendimiento de las necesidades reales de la comunidad.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>¿Ofrecen versiones de prueba de sus productos?</h3>
+                    <span class="faq-toggle">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Sí, ofrecemos versiones de prueba gratuitas de 5 días para la mayoría de nuestros productos. Esto te permite explorar todas las características antes de realizar una compra.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>¿Qué tipo de soporte técnico ofrecen?</h3>
+                    <span class="faq-toggle">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Proporcionamos soporte técnico 24/7 a través de chat en vivo, correo electrónico y tickets de soporte. Además, mantenemos una extensa base de conocimientos y tutoriales para ayudarte a aprovechar al máximo nuestros productos.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3>¿Con qué plataformas de streaming son compatibles sus herramientas?</h3>
+                    <span class="faq-toggle">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Nuestras herramientas son compatibles con las principales plataformas de streaming como Twitch, YouTube, Facebook Gaming, y más. Constantemente actualizamos nuestros productos para mantener la compatibilidad con las nuevas plataformas emergentes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="about-cta">
+              <h2>¿Listo para Mejorar tu Experiencia de Streaming?</h2>
+              <p>Únete a miles de streamers que han transformado su contenido con nuestras soluciones</p>
+              <div class="cta-buttons">
+                <a href="#sectionproducts-content" class="cta-button primary">Ver Productos</a>
+                <a href="#sectioncontact-content" class="cta-button secondary">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--SECTION CONTACT-->
+      <section id="sectioncontact-content" class="sectioncontact-content hidden-section">
+        <div class="contact-container">
+          <!-- Fondo animado con partículas -->
+          <div class="contact-particles-background">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+          </div>
+
+          <!-- Header de la sección de contacto -->
+          <div class="contact-header">
+            <h1 class="contact-title">Ponte en Contacto</h1>
+            <p class="contact-subtitle">Estamos aquí para ayudarte con cualquier pregunta o consulta</p>
+          </div>
+
+          <!-- Contenido principal -->
+          <div class="contact-content">
+            <!-- Información de contacto -->
+            <div class="contact-info">
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <h3>Llámanos</h3>
+                <p>+51 973 287 899</p>
+                <p>Lun - Vie: 9am - 6pm</p>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <h3>Escríbenos</h3>
+                <p>info@youridk.com</p>
+                <p>support@youridk.com</p>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <h3>Visítanos</h3>
+                <p>None</p>
+                <p>None</p>
+              </div>
+
+              <div class="info-card social-card">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </div>
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                  <a class="social-link" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="social-link" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                  </a>
+                  <a  class="social-link" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                  </a>
+                  <a  class="social-link" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                  </a>
+                  <a  class="social-link" aria-label="Twitch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="contact-form-container">
+              <form id="contact-form" class="contact-form">
+                <div class="form-header">
+                  <div class="form-glow"></div>
+                  <h2>Envíanos un mensaje</h2>
+                  <p>Completa el formulario y te responderemos lo antes posible.</p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-container">
+                    <input type="text" id="name" name="name" required class="form-input" placeholder=" " />
+                    <label for="name" class="form-label">Nombre</label>
+                    <div class="input-highlight"></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-container">
+                    <input type="email" id="email" name="email" required class="form-input" placeholder=" " />
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <div class="input-highlight"></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-container">
+                    <select id="subject" name="subject" required class="form-input">
+                      <option value="" disabled selected>Selecciona una opción</option>
+                      <option value="general">Consulta general</option>
+                      <option value="support">Soporte técnico</option>
+                      <option value="billing">Facturación</option>
+                      <option value="partnership">Propuesta de colaboración</option>
+                      <option value="other">Otro</option>
+                    </select>
+                    <label for="subject" class="form-label">Asunto</label>
+                    <div class="input-highlight"></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-container textarea-container">
+                    <textarea id="message" name="message" required class="form-input form-textarea" placeholder=" "></textarea>
+                    <label for="message" class="form-label">Mensaje</label>
+                    <div class="input-highlight"></div>
+                  </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <div class="checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required />
+                    <label for="privacy">Acepto la <a href="#">política de privacidad</a></label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="submit-button">
+                    <span>Enviar mensaje</span>
+                    <div class="button-glow"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Mapa de ubicación -->
+          <div class="contact-map-container">
+            <div class="map-overlay">
+              <div class="map-card">
+                <h3>Nuestra Ubicación</h3>
+                <p>Encuéntranos en el corazón de tu ciudad</p>
+                <a href="https://maps.google.com" target="_blank" class="map-button">
+                  <span>Cómo llegar</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="contact-map">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661969484667!2d-99.17539492562537!3d19.427023041619114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1d81%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1701981800844!5m2!1ses-419!2smx" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- FAQ de contacto -->
+          <div class="contact-faq">
+            <h2 class="faq-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>¿Cuál es el tiempo de respuesta típico?</h3>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>Normalmente respondemos a todas las consultas en un plazo de 24 horas durante días laborables. Para cuestiones urgentes de soporte técnico, puede utilizar nuestro chat en vivo para una respuesta más rápida.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>¿Ofrecen soporte técnico fuera del horario laboral?</h3>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>Sí, ofrecemos soporte técnico de emergencia 24/7 para nuestros clientes con plan Premium. Los usuarios con planes estándar pueden acceder a soporte técnico en horario extendido a través de nuestro sistema de tickets.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>¿Puedo solicitar una demostración personalizada?</h3>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>Absolutamente. Ofrecemos demostraciones personalizadas para todos nuestros productos. Simplemente complete el formulario de contacto seleccionando "Demostración" como asunto, y uno de nuestros especialistas se pondrá en contacto para programar una sesión.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- FULLCREEN DE IMAGENES DEL HOME -->
+    <div id="fullscreen-overlay" class="fullscreen-overlay">
+      <div class="fullscreen-content">
+        <button
+          id="fullscreen-close"
+          class="fullscreen-close"
+          aria-label="Cerrar vista ampliada"
+        >
+          ×
+        </button>
+        <img
+          id="fullscreen-image"
+          class="fullscreen-image"
+          src=""
+          alt="Imagen en pantalla completa"
+        />
+        <div id="fullscreen-title" class="fullscreen-title"></div>
+      </div>
+    </div>
+    <canvas id="canvas" class="background-canvas"></canvas>
+
+    <!-- Footer del sitio - ahora fuera del contenedor del formulario -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Jonax idk. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#terms-of-service">Terms of Service</a>
+          <a href="#privacy-policy">Privacy Policy</a>
+          <a href="#sectioncontact-content">Help Center</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jonax.idk" target="_blank" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.youtube.com/@jonaxoficial" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+        <!-- Modales para Términos y Políticas -->
+    <div id="termsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Términos de Servicio</h2>
+          <button class="modal-close" data-close-modal="termsModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>1. Aceptación de Términos</h3>
+          <p>Al acceder y utilizar este servicio, usted acepta estar sujeto a estos Términos y Condiciones y cumplir con todas las leyes y regulaciones aplicables. Si no está de acuerdo con alguno de estos términos, tiene prohibido utilizar o acceder a este sitio.</p>
+          
+          <h3>2. Licencias</h3>
+          <p>A menos que se indique lo contrario, todo el material contenido en este servicio es propiedad exclusiva de nuestra empresa y está protegido por leyes de copyright y marcas registradas.</p>
+          
+          <h3>3. Limitaciones de Uso</h3>
+          <p>El usuario se compromete a utilizar el servicio únicamente para los fines permitidos por estos términos y por cualquier ley o regulación aplicable.</p>
+          
+          <h3>4. Cuentas de Usuario</h3>
+          <p>Cuando crea una cuenta en nuestro servicio, debe proporcionar información precisa, completa y actualizada en todo momento. El incumplimiento de esta obligación constituye una violación de los Términos, lo que puede resultar en la terminación inmediata de su cuenta.</p>
+          
+          <h3>5. Modificaciones del Servicio</h3>
+          <p>Nos reservamos el derecho de modificar o descontinuar, temporal o permanentemente, el servicio (o cualquier parte del mismo) con o sin previo aviso.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button" data-close-modal="termsModal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="privacyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Política de Privacidad</h2>
+          <button class="modal-close" data-close-modal="privacyModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>Información que Recopilamos</h3>
+          <p>Recopilamos varios tipos de información para diversos fines con el objetivo de proporcionar y mejorar nuestro servicio.</p>
+          
+          <h4>Datos Personales</h4>
+          <p>Al utilizar nuestro servicio, podemos solicitar cierta información de identificación personal que puede ser utilizada para contactarlo o identificarlo ("Datos Personales"). Esta información puede incluir, pero no se limita a:</p>
+          <ul>
+            <li>Dirección de correo electrónico</li>
+            <li>Nombre y apellido</li>
+            <li>Cookies y datos de uso</li>
+          </ul>
+          
+          <h3>Uso de Datos</h3>
+          <p>Utilizamos los datos recopilados para diversos fines:</p>
+          <ul>
+            <li>Para proporcionar y mantener nuestro servicio</li>
+            <li>Para notificarle sobre cambios en nuestro servicio</li>
+            <li>Para permitirle participar en funciones interactivas de nuestro servicio cuando decida hacerlo</li>
+            <li>Para proporcionar atención y soporte al cliente</li>
+            <li>Para proporcionar análisis o información valiosa que nos permita mejorar el servicio</li>
+            <li>Para monitorizar el uso del servicio</li>
+            <li>Para detectar, prevenir y abordar problemas técnicos</li>
+          </ul>
+          
+          <h3>Transferencia de Datos</h3>
+          <p>Su información, incluyendo Datos Personales, puede ser transferida a — y mantenida en — ordenadores localizados fuera de su estado, provincia, país u otra jurisdicción gubernamental donde las leyes de protección de datos pueden diferir de las de su jurisdicción.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button" data-close-modal="privacyModal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./usermain/userparticles.js"></script>
+    <script src="./usermain/userapp.js"></script>
+    <script src="./usermain/scripts/scriptheader.js"></script>
+    <script src="./usermain/scripts/scriptsidebar.js"></script>
+    <script src="./usermain/scripts/scriptcarousel.js"></script>
+    <script src="./usermain/scripts/scriptfullscreen.js"></script>
+    <script src="./usermain/scripts/scriptdownload.js"></script>
+    <script src="./usermain/scripts/scriptProducts.js"></script>
+    <script src="./usermain/scripts/scriptUpdates.js"></script>
+    <script src="./usermain/scripts/scriptyourwebsite.js"></script>
+    <script src="./usermain/scripts/scriptAbout.js"></script>
+    <script src="./usermain/scripts/scriptContact.js"></script>
+    <script src="./usermain/scripts/scriptModalFooter.js"></script>   
+    
+  </body>
+</html>

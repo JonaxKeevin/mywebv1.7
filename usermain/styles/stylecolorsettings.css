@@ -1,0 +1,8 @@
+.color-settings {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 0px; /* Adjust this value to control the space between color-settings and footer */
+  z-index: 1; /* Ensures it stays above other content */
+}

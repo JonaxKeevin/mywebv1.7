@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Idk</title>
+    <link rel="stylesheet" href="stylelogin.css" />
+    <link rel="stylesheet" href="../usermain/styles/styleheader.css" />
+    <link rel="stylesheet" href="../usermain/styles/stylefooter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <canvas id="spiderCanvas" class="spider-canvas"></canvas>
+
+    <!--header-->
+    <!--HEADER-->
+    <header id="main-header" class="site-header">
+      <div class="header-container">
+        <img
+          class="site-logo"
+          id="site-logo"
+          src="../home/sources/logotransparent.png"
+          alt="SENSI JONAX Logo"
+        />
+        <a class="site-title" id="site-title">IDK TEAM</a>
+        <button
+          type="button"
+          id="mobile-menu-toggle"
+          class="mobile-menu-toggle"
+          aria-label="Abrir menú"
+        >
+          <span class="menu-icon">≡</span>
+        </button>
+        <div id="main-navigation-container" class="main-navigation-container">
+          <nav
+            id="main-navigation"
+            class="main-navigation"
+            aria-label="Navegación principal"
+          >
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#sectionabout-content" class="nav-link"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  aria-expanded="false"
+                  >Options ≡</a
+                >
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">
+                    <a
+                      href="../index.html#sectionproducts-content"
+                      class="dropdown-link"
+                      >Products</a
+                    >
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#" class="dropdown-link">Particles</a>
+                  </li>
+                  <li class="dropdown-divider"><hr /></li>
+                  <li class="dropdown-item">
+                    <a
+                      href="../index.html#sectiondownload-content"
+                      class="dropdown-link"
+                      >Download</a
+                    >
+                  </li>
+                  <li class="dropdown-item">
+                    <a
+                      href="../index.html#sectionupdates-content"
+                      class="dropdown-link"
+                      >Updates</a
+                    >
+                  </li>
+                  <li class="dropdown-item">
+                    <a
+                      href="../index.html#sectioncreate-website"
+                      class="dropdown-link"
+                      >Create Website</a
+                    >
+                  </li>
+                  <li class="dropdown-item">
+                    <a
+                      href="../index.html#sectionabout-content"
+                      class="dropdown-link"
+                      >About</a
+                    >
+                  </li>
+                  <li class="dropdown-divider"><hr /></li>
+                  <li class="dropdown-item">
+                    <a
+                      href="../index.html#sectioncontact-content"
+                      class="dropdown-link"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="../login/loginhtml.html" class="nav-link nav-logout"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <form role="search" id="search-form" class="search-form">
+            <input
+              type="search"
+              id="search-input"
+              class="search-input"
+              placeholder="Search..."
+              aria-label="Buscar"
+            />
+            <button type="submit" id="search-button" class="search-button">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- Formulario de LOGIN -->
+    <div class="login-form-container">
+      <form id="login-form" class="login-form">
+        <div class="form-header">
+          <div class="form-glow"></div>
+          <h2>LOGIN</h2>
+          <p>Ingresa tus credenciales para acceder</p>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              class="form-input"
+              placeholder=" "
+            />
+            <label for="username" class="form-label">Username</label>
+            <div class="input-highlight"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container password-container">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="form-input"
+              placeholder=" "
+            />
+            <label for="password" class="form-label">Password</label>
+            <div class="input-highlight"></div>
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Toggle password visibility"
+            >
+              <!-- Icono de ojo cerrado (por defecto) -->
+              <svg
+                class="eye-icon eye-closed"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                ></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+              <!-- Icono de ojo abierto (cuando se activa) -->
+              <svg
+                class="eye-icon eye-open"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <div class="checkbox-container">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Recordar mis datos</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="submit-button">
+            <span>Iniciar sesión</span>
+            <div class="button-glow"></div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="form-footer">
+          <a href="../register/register.html" class="footer-link">Register?</a>
+          <span class="footer-divider">|</span>
+          <a href="#" class="footer-link">Contact Support</a>
+        </div>
+      </form>
+    </div>
+    <!-- Añadir después del footer -->
+    <div class="spider-toggle">
+      <button
+        id="toggleSpider"
+        class="toggle-spider-btn"
+        title="Mostrar/Ocultar araña"
+      >
+        <i class="fas fa-spider"></i>
+      </button>
+    </div>
+    <!-- Footer del sitio - ahora fuera del contenedor del formulario -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Jonax idk. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Help Center</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="particleslogin.js"></script>
+    <script src="scriptlogin.js"></script>
+    <script src="../usermain/scripts/scriptheader.js"></script>
+    <script src="loginindex.js"></script>
+    <script src="arañaScript.js"></script>
+  </body>
+</html>
